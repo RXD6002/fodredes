@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fodredes - Tu Empresa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4f8892;
+        }
+        header {
+            background-color: #504d4d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        nav ul {
+            background-color: #333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        section {
+            padding: 20px;
+        }
+        address {
+            font-style: normal;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        #center{
+            text-align: center;
+        }
+        #left{
+            text-align: left;
+            height: 115px;
+            width: 100px;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #margin{
+            margin: 20px;
+        }
+        .comments {
+            padding: 20px;
+            background-color: #4f8892;
+        }
+        .comment {
+            background-color: #504d4d;
+            border: 5px solid #333;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .comment-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./Logo.png" id="left"></img>
+        <h1>Bienvenido a Fodredes</h1>
+        <p>Tu socio confiable para redes de alta velocidad</p>
+    </header>
+
+    <nav>
+        <ul id="center">
+            <li><a href="#AcercaDe">Acerca de nosotros</a></li>
+            <li><a href="#Servicios">Servicios</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <a id="AcercaDe"></a>
+        <h2>Acerca de Fodredes</h2>
+        <p>Fodredes es una empresa líder en el campo de la instalación de redes y cableado estructurado. Con una vasta experiencia y un equipo altamente calificado, nos enorgullece ser tu socio confiable para garantizar que tus sistemas de comunicación y redes funcionen de manera eficiente y sin interrupciones.</p>
+        <p>Nuestro compromiso es proporcionar soluciones de conectividad a medida que se adaptan a las necesidades específicas de tu empresa. Ya sea que requieras una red de datos sólida, un cableado de voz confiable o soluciones de fibra óptica de alta velocidad, estamos aquí para ofrecerte servicios de calidad excepcional.</p>
+        <p>En Fodredes, nos esforzamos por la excelencia en cada proyecto. Nuestro equipo de expertos trabaja en estrecha colaboración contigo para diseñar, instalar y mantener sistemas de redes de última generación que impulsarán la productividad de tu negocio. Además, utilizamos tecnología de punta y las mejores prácticas de la industria para garantizar un rendimiento óptimo y una infraestructura de comunicación robusta.</p>
+        <p>Confía en nosotros para brindarte soluciones de cableado estructurado y redes que superen tus expectativas. Estamos comprometidos a ofrecer resultados de alta calidad, dentro del presupuesto y en el plazo acordado.</p>
+    </section>
+    
+    <img src="./Switch.gif" id="margin">
+
+    <section>
+        <a id="Servicios"></a>
+        <h2>Nuestros Servicios</h2>
+        <ul>
+            <li>Creación de redes</li>
+            <li>Instalación de cableado estructurado</li>
+            <li>Instalación de equipos informáticos</li>
+            <li>Servicio postventa "RedCare"</li>
+            <li>Presupuestos sin costos</li>
+        </ul>
+    </section>
+
+    <section>
+        <a id="Contacto"></a>
+        <h2>Contacto</h2>
+        <p>Ponte en contacto con nosotros a través de los siguientes medios:</p>
+        <address>
+            Dirección: Av. Luis Alberto de Herrera 4642<br>
+            Teléfono: 094 295 523<br>
+            Correo Electrónico: fodredes@gmail.com
+        </address>
+        <button id="submitBtn">Enviar</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 FODredes - Todos los derechos reservados.</p>
+    </footer>
+
+    <section class="comments">
+        <h2>Comentarios de Usuarios</h2>
+        <div class="comment">
+            <p><strong>Carlos Gutierrez:</strong> ¡Excelente servicio! Estoy muy satisfecho con el trabajo de Fodredes.</p>
+        </div>
+        <div class="comment">
+            <p><strong>Cristina Velázquez:</strong> Rápidos y eficientes, definitivamente los recomendaré a otros.</p>
+        </div>
+        <!-- Agregar más comentarios aquí -->
+
+        <div class="comment-form">
+            <h3>Agregar un Comentario</h3>
+            <form id="commentForm">
+                <input type="text" id="userName" placeholder="Tu Nombre" required><br>
+                <textarea id="userComment" placeholder="Tu Comentario" rows="4" required></textarea><br>
+                <button type="submit">Publicar Comentario</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="scrollToTopBtn">Volver arriba</button>
+
+    <script>
+        // JavaScript para el botón de enviar
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            alert("¡Gracias por ponerte en contacto con nosotros!");
+        });
+
+        // JavaScript para el botón "Volver arriba"
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Mostrar el botón cuando el usuario baja una cierta distancia
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Volver al encabezado cuando se hace clic en el botón
+        scrollToTopBtn.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        document.getElementById("commentForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var userName = document.getElementById("userName").value;
+            var userComment = document.getElementById("userComment").value;
+
+            if (userName && userComment) {
+                var commentDiv = document.createElement("div");
+                commentDiv.className = "comment";
+                commentDiv.innerHTML = "<p><strong>" + userName + ":</strong> " + userComment + "</p>";
+
+                var commentsSection = document.querySelector(".comments");
+                commentsSection.insertBefore(commentDiv, document.querySelector(".comment-form"));
+
+                // Guardar el comentario en localStorage
+                var comments = JSON.parse(localStorage.getItem("comments")) || [];
+                comments.push({ userName: userName, userComment: userComment });
+                localStorage.setItem("comments", JSON.stringify(comments));
+
+                document.getElementById("userName").value = "";
+                document.getElementById("userComment").value = "";
+            }
+        });
+
+        var comments = JSON.parse(localStorage.getItem("comments")) || [];
+        var commentsSection = document.querySelector(".comments");
+
+        comments.forEach(function(comment) {
+            var commentDiv = document.createElement("div");
+            commentDiv.className = "comment";
+            commentDiv.innerHTML = "<p><strong>" + comment.userName + ":</strong> " + comment.userComment + "</p>";
+            commentsSection.insertBefore(commentDiv, document.querySelector(".comment-form"));
+        });
+
+        function deleteComment(button) {
+            if (confirm("¿Estás seguro de que deseas eliminar este comentario?")) {
+                var commentDiv = button.parentNode;
+                commentDiv.parentNode.removeChild(commentDiv);
+
+                // Actualizar los comentarios en localStorage
+                var commentText = commentDiv.innerText.trim();
+                var updatedComments = comments.filter(function(comment) {
+                    return comment.userName + ": " + comment.userComment !== commentText;
+                });
+                localStorage.setItem("comments", JSON.stringify(updatedComments));
+            }
+        }
+    </script>
+</body>
+</html>
